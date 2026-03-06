@@ -1,0 +1,73 @@
+:root {
+  font-family: 'Roboto', sans-serif; /* A more common, clean font */
+  line-height: 1.6;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: #f0f0f0; /* Light text for dark background */
+  background-color: #1a1a1a; /* Dark background */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+#app {
+  max-width: 960px; /* Slightly smaller max-width for content */
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  width: 100%; /* Ensure app takes full width */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ffe81f; /* Star Wars yellow for headings */
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+a {
+  font-weight: 500;
+  color: #42b983; /* Green for links */
+  text-decoration: none;
+}
+a:hover {
+  color: #53d09a;
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  background-color: #ffe81f;
+  color: #1a1a1a;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+button:hover {
+  background-color: #f0c808;
+}
+button:disabled {
+  background-color: #666;
+  color: #ccc;
+  cursor: not-allowed;
+}
