@@ -1,0 +1,17 @@
+{
+  "name": "examenp2-root",
+  "version": "1.0.0",
+  "description": "Root package for managing Vue and Express applications",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix vue-frontend\" \"npm start --prefix express-backend\"",
+    "build": "npm run build --prefix vue-frontend",
+    "start": "npm start --prefix express-backend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

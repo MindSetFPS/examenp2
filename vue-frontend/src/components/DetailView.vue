@@ -1,6 +1,7 @@
 <script setup>
 import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
+import LoadingSpinner from './LoadingSpinner.vue' // Import the spinner
 
 const route = useRoute()
 const itemDetails = ref(null)
@@ -45,7 +46,7 @@ const formatKey = (key) => {
   <div class="detail-view">
     <router-link :to="`/${route.params.entity}`" class="back-link">&lt; Back to {{ route.params.entity }} List</router-link>
     <h2 v-if="itemDetails">{{ itemDetails.name || itemDetails.title }}</h2>
-    <div v-if="loading">Loading details...</div>
+    <LoadingSpinner v-if="loading" />
     <div v-else-if="error" class="error">Error: {{ error.message }}</div>
     <div v-else-if="itemDetails" class="details-card">
       <div v-for="(value, key) in itemDetails" :key="key" class="detail-item">

@@ -1,6 +1,7 @@
 <script setup>
 import { ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import LoadingSpinner from './LoadingSpinner.vue' // Import the spinner
 
 const route = useRoute()
 const router = useRouter()
@@ -104,7 +105,7 @@ watch(
       <div v-if="searchError" class="search-error">{{ searchError }}</div>
     </div>
 
-    <div v-if="loading">Loading...</div>
+    <LoadingSpinner v-if="loading" />
     <div v-else-if="error" class="error">Error: {{ error.message }}</div>
     <ul v-else-if="items.length">
       <li v-for="item in items" :key="item.url || item.name || item.title">
